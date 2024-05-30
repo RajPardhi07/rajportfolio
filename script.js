@@ -107,43 +107,43 @@ function loaderAnimation() {
 
 function mover(){
     var tl = gsap.timeline()
-    tl.from("#mover .child",{
-      y:"120%",
-      duration:2,
-      skewY:4,
-      stagger:.5,
-      opacity:0,
-      onComplete:function(){
-     setTimeout(() => {
-              const counters = document.querySelectorAll('.value');
-              const speed = 300;
+    // tl.from("#mover .child",{
+    //   y:"120%",
+    //   duration:2,
+    //   skewY:4,
+    //   stagger:.5,
+    //   opacity:0,
+    //   onComplete:function(){
+    //  setTimeout(() => {
+    //           const counters = document.querySelectorAll('.value');
+    //           const speed = 300;
               
-              counters.forEach( counter => {
-                 const animate = () => {
-                    const value = +counter.getAttribute('akhi');
-                    const data = +counter.innerText;
+    //           counters.forEach( counter => {
+    //              const animate = () => {
+    //                 const value = +counter.getAttribute('akhi');
+    //                 const data = +counter.innerText;
                    
-                    const time = value / speed;
-                   if(data < value) {
-                        counter.innerText = Math.ceil(data + time);
-                        setTimeout(animate, 1);
-                      }else{
-                        counter.innerText = value;
-                      }
+    //                 const time = value / speed;
+    //                if(data < value) {
+    //                     counter.innerText = Math.ceil(data + time);
+    //                     setTimeout(animate, 1);
+    //                   }else{
+    //                     counter.innerText = value;
+    //                   }
                    
-                 }
+    //              }
                  
-                 animate();
-              });
-             }, 1000);
+    //              animate();
+    //           });
+    //          }, 1000);
         
          
          
       
       
      
-      }
-    })
+    //   }
+    // })
   
     tl.to("#mover",{
       top:"-100%",
